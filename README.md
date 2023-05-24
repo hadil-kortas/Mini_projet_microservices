@@ -15,6 +15,8 @@ npm install http-proxy-middleware
 
 # BOOKS MICROSERVICE 
 
+Port : localhost:5000
+
 Rest :
 
 Get/books
@@ -61,6 +63,8 @@ mutation Mutation($title: String!, $author: String! $publicationYear: Int! ) {
 
 # CUSTOMERS MICROSERVICE 
 
+Port : localhost:5001
+
 Rest :
 
 Get/customers
@@ -103,6 +107,8 @@ mutation Mutation($name: String!, $email: String! $phone: Int! ) {
 
 # ORDERS MICROSERVICE 
 
+Port : localhost:5002
+
 Rest : 
 Get/orders
 
@@ -144,6 +150,10 @@ mutation Mutation($customerID: Int!, $bookId: Int!, $quantity: Int!, $totalAmoun
   }
   
 }
+
+# api gateway
+
+Port: localhost:5003
 
 
 
