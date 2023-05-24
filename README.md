@@ -19,9 +19,11 @@ Rest :
 
 Get/books
 
+
 GraphQL :
 
 query {
+
    books {
     id
     title
@@ -29,6 +31,34 @@ query {
     publicationYear
   }
 }
+
+Rest : 
+
+Post/book
+
+| Parameter | Type | Description |
+| -------------- | -------------- | -------------- |
+| title | string | required |
+| author | string | required |
+| publicationYear | number | required |
+
+
+
+
+GraphQL : 
+
+mutation Mutation($title: String!, $author: String! $publicationYear: Int! ) {
+
+  createUser(title: $title, author: $author, publicationYear: $publicationYear ) {
+    id
+    title
+    author
+    publicationYear
+  }
+}
+
+
+
 
 
 
