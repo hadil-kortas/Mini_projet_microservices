@@ -49,14 +49,121 @@ GraphQL :
 
 mutation Mutation($title: String!, $author: String! $publicationYear: Int! ) {
 
-  createUser(title: $title, author: $author, publicationYear: $publicationYear ) {
+  addBook(title: $title, author: $author, publicationYear: $publicationYear ) {
     
    id
    title    
    author    
    publicationYear
   }
+  
 }
+
+# CUSTOMERS MICROSERVICE 
+
+Rest :
+
+Get/customers
+
+GraphQL :
+
+query {
+   customers {
+    id
+    name
+    email
+    phone
+  }
+}
+
+Rest : 
+
+Post/customer
+
+| Parameter | Type | Description |
+| -------------- | -------------- | -------------- |
+| name | string | required |
+| email | string | required |
+| phone | number | required |
+
+
+GraphQL : 
+
+mutation Mutation($name: String!, $email: String! $phone: Int! ) {
+
+  addCustomer(name: $name, email: $email, phone: $phone ) {
+    
+   id
+   name    
+   email    
+   phone
+  }
+  
+}
+
+# ORDERS MICROSERVICE 
+
+Rest : 
+Get/orders
+
+GraphQL : 
+
+query {
+   orders {
+    id
+    customerId
+    bookId
+    quantity
+    totalAmount
+  }
+}
+
+Rest :
+
+Post/order
+
+| Parameter | Type | Description |
+| -------------- | -------------- | -------------- |
+| customerId | int | required |
+| bookId | int | required |
+| quantity | number | required |
+| totalAmount | float | required |
+
+GraphQL : 
+
+mutation Mutation($customerID: Int!, $bookId: Int!, $quantity: Int!, $totalAmount: Float! ) {
+
+  addOrder(customerId: $customerId, bookId: $bookId, quantity: $quantity, totalAmount: $totalAmount ) {
+    
+   id
+   customerId    
+   bookId    
+   quantity
+   totalAmount
+   
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
