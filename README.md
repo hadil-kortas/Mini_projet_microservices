@@ -183,23 +183,39 @@ Port: localhost:5003
 
 To start the ApiGateway server, run the following
 
+```
+
 cd api-gateway
 node server.js
 
+```
+
 To start the book server, run the following
+
+```
 
 cd books-service
 node server.js
 
+```
+
 To start the Customer server, run the following
+
+```
 
 cd customers-service
 node server.js
 
+```
+
 To start the Order server, run the following
+
+```
 
 cd orders-service
 node server.js
+
+```
 
 
 
