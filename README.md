@@ -50,9 +50,13 @@ GraphQL :
 mutation Mutation($title: String!, $author: String! $publicationYear: Int! ) {
 
   createUser(title: $title, author: $author, publicationYear: $publicationYear ) {
+    
     id
+    
     title
+    
     author
+    
     publicationYear
   }
 }
