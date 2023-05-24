@@ -9,4 +9,26 @@ npm install express graphql sqlite3 body-parser express-graphql
 
 api-gateway:
 
+npm install express
+
 npm install http-proxy-middleware
+
+# BOOKS MICROSERVICE 
+
+Rest :
+
+Get/books
+
+GraphQL :
+
+query {
+   books {
+    id
+    title
+    author
+    publicationYear
+  }
+}
+
+
+
