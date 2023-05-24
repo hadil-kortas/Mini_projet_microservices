@@ -24,6 +24,8 @@ Get/books
 
 GraphQL :
 
+```
+
 query {
 
    books {
@@ -33,6 +35,8 @@ query {
     publicationYear
   }
 }
+
+```
 
 Rest : 
 
@@ -49,6 +53,8 @@ Post/book
 
 GraphQL : 
 
+```
+
 mutation Mutation($title: String!, $author: String! $publicationYear: Int! ) {
 
   addBook(title: $title, author: $author, publicationYear: $publicationYear ) {
@@ -61,6 +67,8 @@ mutation Mutation($title: String!, $author: String! $publicationYear: Int! ) {
   
 }
 
+```
+
 # CUSTOMERS MICROSERVICE 
 
 Port : localhost:5001
@@ -71,6 +79,8 @@ Get/customers
 
 GraphQL :
 
+```
+
 query {
    customers {
     id
@@ -79,6 +89,8 @@ query {
     phone
   }
 }
+
+```
 
 Rest : 
 
@@ -93,6 +105,8 @@ Post/customer
 
 GraphQL : 
 
+```
+
 mutation Mutation($name: String!, $email: String! $phone: Int! ) {
 
   addCustomer(name: $name, email: $email, phone: $phone ) {
@@ -105,6 +119,8 @@ mutation Mutation($name: String!, $email: String! $phone: Int! ) {
   
 }
 
+```
+
 # ORDERS MICROSERVICE 
 
 Port : localhost:5002
@@ -113,6 +129,8 @@ Rest :
 Get/orders
 
 GraphQL : 
+
+```
 
 query {
    orders {
@@ -123,6 +141,8 @@ query {
     totalAmount
   }
 }
+
+```
 
 Rest :
 
@@ -136,6 +156,8 @@ Post/order
 | totalAmount | float | required |
 
 GraphQL : 
+
+```
 
 mutation Mutation($customerID: Int!, $bookId: Int!, $quantity: Int!, $totalAmount: Float! ) {
 
@@ -151,9 +173,39 @@ mutation Mutation($customerID: Int!, $bookId: Int!, $quantity: Int!, $totalAmoun
   
 }
 
+```
+
 # api gateway
 
 Port: localhost:5003
+
+# Run
+
+To start the ApiGateway server, run the following
+
+cd api-gateway
+node server.js
+
+To start the book server, run the following
+
+cd books-service
+node server.js
+
+To start the Customer server, run the following
+
+cd customers-service
+node server.js
+
+To start the Order server, run the following
+
+cd orders-service
+node server.js
+
+
+
+
+
+
 
 
 
